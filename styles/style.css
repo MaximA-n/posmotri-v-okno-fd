@@ -112,7 +112,7 @@ ol {
 }
 
 .content__details .title {
-  margin: 0 140px 26px 0;
+  margin-bottom: 20px;
 }
 
 .title {
@@ -139,6 +139,7 @@ ol {
 }
 
 .content__card-link {
+  display: block;
   color: #fff;
   text-decoration: none;
 }
@@ -147,10 +148,14 @@ ol {
   display: flex;
 }
 
+.content__video-card-description-container {
+  flex-grow: 1;
+}
+
 .content__video-card-title {
   margin-bottom: 5px;
-  margin-top: 5px;
   width: 100%;
+  max-width: 196px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -175,14 +180,11 @@ ol {
 }
 
 .content__video-card-thumbnail {
+  flex-shrink: 0;
   object-fit: cover;
   object-position: center;
   inline-size: 194px;
   block-size: 103px;
-}
-
-.content__video-card-description-container {
-  flex-grow: 1;
 }
 
 .visually-hidden {
@@ -256,7 +258,7 @@ fieldset {
   margin-right: 5px;
 }
 
-.search-form__label-text:hover {
+.search-form__label:has(.search-form__checkbox):hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;  
   text-underline-offset: 3px;
@@ -283,16 +285,12 @@ fieldset {
 
 .search-form__submit-button {  
   margin-top: 20px;
-  inline-size: 194px;
-  block-size: 34px;  
+  padding: 6px 72px;
 }
 
 .more-button {
-  margin-top: 26px;
-  margin-bottom: 3px;
-  margin-left: 5px;  
-  inline-size: 390px;
-  block-size: 34px;
+  margin-top: 30px; 
+  padding: 6px 142px;
 }
 
 .button:active {
@@ -323,7 +321,7 @@ fieldset {
   background-color: rgba(84, 80, 80, 1);
 }
 
-.content__list-item:active {
+.content__card-link:active {
   background-color: rgba(84, 80, 80, 1);
   text-decoration: none;
 }
@@ -334,11 +332,11 @@ fieldset {
   text-underline-offset: 1px;  
 }
 
-.content__list-item:focus {
+.content__card-link:focus {
   outline: none;
 }
 
-.content__list-item:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 2px;  
+  outline-offset: 1px;
 }
